@@ -14,7 +14,6 @@ def palindrome(str):
 	str = str.replace(' ', '')
 	if str == str[::-1]:
 		return str
-	return str
 class Test(unittest.TestCase):
 	def test_palindrome_pythonic(self):
 		self.assertEqual(palindrome_pythonic('aba'), 'aba')
