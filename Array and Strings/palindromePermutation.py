@@ -1,6 +1,5 @@
 # Check whether the given string is palindrome or not.
 
-from logging import StringTemplateStyle
 import unittest
 
 def palindrome_pythonic(str):
@@ -14,6 +13,9 @@ def palindrome(str):
 	str = str.replace(' ', '')
 	if str == str[::-1]:
 		return str
+
+
+
 class Test(unittest.TestCase):
 	def test_palindrome_pythonic(self):
 		self.assertEqual(palindrome_pythonic('aba'), 'aba')
