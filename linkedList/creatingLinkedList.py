@@ -1,6 +1,4 @@
-
 # creating a LinkedList
-
 
 class Node:
     def __init__(self, data):
@@ -14,12 +12,13 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def __str__(self):
         node = self.head
         nodes = []
         while node:
-            nodes.append(node.data)
+            nodes.append(str(node.data))
             node = node.next
         nodes.append('None')
         return ' -> '.join(nodes)

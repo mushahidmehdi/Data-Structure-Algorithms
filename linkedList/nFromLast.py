@@ -24,4 +24,7 @@ class KElementFromLast(LinkedList):
 
 
 ll = KElementFromLast()
-
+ll.append_beg(Node('D'))
+ll.append_beg(Node('C'))
+ll.append_beg(Node('B'))
+ll.append_beg(Node('A'))	
