@@ -2,25 +2,24 @@
 
 from creatingLinkedList import LinkedList, Node
 
-class DelMiddleNode(LinkedList):
-	def pop(self, pos):
-		
-		previous = self.head
-		for current in self:
-			if current.data == pos and current.next != None:
-				previous.next = current.next
-			previous = current
-		
-		
+class DelNode(LinkedList):
+	# method 1
+	def del_node(self, node):
+		prev_node = None
+		current = self.head
+		while current:
+			if current.value == node:
+				prev_node.next = current.next
+			prev_node = current
+			current = current.next
+		return self
 
 
+test_cases = (10, 20, 30, 40, 50)
 
-
-ll = DelMiddleNode()
-ll.append_beg(Node('D'))
-ll.append_beg(Node('C'))
-ll.append_beg(Node('B'))
-ll.append_beg(Node('A'))
-print(f'before Delete: {ll}')
-ll.pop('D')
-print(f'After Delete: {ll}')
+#	ll = DelNode()
+#	for i in test_cases:
+#		ll.add_last(i)
+#	
+#	print(ll.del_node(20))
+#	

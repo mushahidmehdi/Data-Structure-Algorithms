@@ -4,27 +4,22 @@
 
 from creatingLinkedList import LinkedList, Node
 
-class KElementFromLast(LinkedList):
-	def k_element(self, posi):
-		lenght = 0
-		temp_node = self.head
-
-		while temp_node:
-			lenght += 1
-			temp_node = temp_node.next
-
-		if lenght < posi:
-			return ("The position is out of range")
-
-		temp_node = self.head
-		for _ in range(0, lenght-posi):
-			temp_node = temp_node.next
-		
-		return temp_node.data
+class KFromLast(LinkedList):
+	def k_frm_last(self, k):
+		length = self.__len__()
+		temp = self.head
+		for _ in range(0, length-k):
+			temp = temp.next
+		return temp
 
 
-ll = KElementFromLast()
-ll.append_beg(Node('D'))
-ll.append_beg(Node('C'))
-ll.append_beg(Node('B'))
-ll.append_beg(Node('A'))	
+#test_cases = (10, 20, 30, 40, 50)
+#
+#ll = KFromLast()
+#for x in test_cases:
+#	ll.add_last(x)
+#
+#
+
+
+

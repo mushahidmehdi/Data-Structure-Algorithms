@@ -1,94 +1,91 @@
 # creating a LinkedList
 
+# init, iter, len, str, values, add_beg, add_last, add mutiple.
+import random
+
 class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+    def __init__(self, value, next_node=None, prev_node=None):
+        self.value = value
+        self.next = next_node
+        self.prev = prev_node
 
     def __str__(self):
-        return self.data
+        return str(self.value)
 
 
 class LinkedList:
-    def __init__(self):
+    def __init__(self, data=None):
         self.head = None
         self.tail = None
 
     def __str__(self):
-        node = self.head
-        nodes = []
-        while node:
-            nodes.append(str(node.data))
-            node = node.next
-        nodes.append('None')
-        return ' -> '.join(nodes)
+        value = [str(v) for v in self]
+        return ' -> '.join(value)
 
     def __len__(self):
-        leng = 0
         node = self.head
-        while node is not None:
-            leng += 1
+        ln = 0
+        while node:
+            ln += 1
             node = node.next
-        return leng
+        return ln
 
     def __iter__(self):
-        current = self.head
-        while current is not None:
-            yield current
-            current = current.next
+        node = self.head
+        while node:
+            yield node
+            node = node.next
 
-    def append_beg(self, node):
-        node.next = self.head
-        self.head = node
-    
-    def append(self, node):
+    def values(self):
+        return [str(x) for x in self]
+
+    def add_beg(self, data):
         if self.head is None:
-            raise ValueError("Empty List")
+            self.tail = self.head = Node(data)
+        else:
+            self.head = Node(data, self.head)
+        return self.head
 
-        for current in self: pass
-        current.next = node
-    
-    def insert(self, postion, new_node):
+    def add_last(self, data):
         if self.head is None:
-            raise ValueError("Empty list")
+            self.tail = self.head = Node(data)
+        else:
+            self.tail.next = Node(data)
+            self.tail = self.tail.next
 
-        for node in self:
-            if node.data == postion:
-                new_node.next = node.next
-                node.next = new_node
-                return 
-        raise Exception('Position not found')
+    def add_mutiple(self, mut):
+        for m in mut:
+            self.add_last(m)
+
+    @classmethod
+    def generate(cls, k, min_val, max_val):
+        return cls(random.choices(range(min_val, max_val), k=k))
 
 
-#
-#linked = LinkedList()
-#first = Node('a')
-#second = Node('b')
-#third = Node('c')
+class DoubleLinkedList(LinkedList):
+    def add_last(self, data):
+        if self.head is None:
+            self.tail = self.head = Node(data)
+        else:
+            self.tail.next = Node(data, None, self.tail)
+            self.tail = self.tail.next
+        return self
 
-#linked.head = first
-#first.next = second
-#second.next = third
-#
-#linked.add_beg(Node('B'))
-#linked.add_beg(Node('A'))
-#
-#linked.add_end(Node('X'))
-#linked.add_end(Node('Y'))
-#linked.add_end(Node('Z'))
-#
-#linked.add_bt('A', Node('a'))
-#linked.add_bt('X', Node('x'))
-#linked.add_bt('Z', Node('z'))
-#
-#
-##print(len(linked))
-##for i in linked:
-##    print(i.data)
-#
-#print(linked)
 
-keys = [5, 3, 4, 2, 5, 4, 1, 3]
-for parm in keys:
-   head = Node(parm)
-   
+#values = [1,2,3,4,5,6,7,8]
+#
+#ll = LinkedList()
+#ll.add_mutiple(values)
+#print(ll)
+#ll.add_beg(0)
+#ll.add_last(9)
+#print(len(ll))
+#print(ll.values())
+#print(ll)
+#for i in ll:
+#    print(i.value)
+
+#dll = DoubleLinkedList()
+#dll.add_mutiple(values)
+#dll.add_last(9)
+#print(dll)
