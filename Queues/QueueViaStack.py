@@ -36,3 +36,5 @@ if __name__ == '__main__':
 	queue.enQueue(4)
 	print(queue.deQueue())
 	print(queue.deQueue())
+	print(queue.deQueue())
+	print(queue.deQueue())
