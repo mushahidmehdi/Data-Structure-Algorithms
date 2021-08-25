@@ -15,9 +15,14 @@ class LinkedList:
 		self.head = None
 
 	def add(self, data):
-		data.next = self.head
-		self.head = data
+		if self.head is None:
+			self.head = data
+			return
 
+		current = self.head
+		while current.next:
+			current = current.next
+		current.next = data
 
 	def __len__(self):
 		ln = 0
@@ -26,6 +31,17 @@ class LinkedList:
 			ln +=1
 			current = current.next
 		return ln
+	
+	def __iter__(self):
+		current = self.head
+		while current:
+			yield current
+			current = current.next
+
+	def __str__(self):
+		prt = [str(x.data) for x in self]
+		return ' '.join(prt)
+		
 
 	def pop_head(self):
 		if self.head is not None:
@@ -86,6 +102,10 @@ def test_animal_shelter():
 	animal_shelter.enqueue(Dog('Scar-Nose'))
 	animal_shelter.enqueue(Dog('Hip-Scar'))
 	assert len(animal_shelter) == 10
+	print(animal_shelter)
+	for i in animal_shelter:
+		print(i.data)
+	
 
 
 if __name__ == '__main__':
