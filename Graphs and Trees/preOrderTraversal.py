@@ -10,38 +10,34 @@ class Node:
 		self.left = None
 
 # recussion
-def pre_order_recurssion(data):
-	tree_array = []
-	pre_order_recurssion_util(data, tree_array)
-	return tree_array
+def pre_order_recurrsive(root):
+	stack = []
+	pre_order_recurssive_util(root, stack)
+	return stack
 
-def pre_order_recurssion_util(data, tree):
-	if data is None:
-		return
-
-	tree.append(data.data)
-	pre_order_recurssion_util(data.left, tree)
-	pre_order_recurssion_util(data.right, tree)
-	return
-
-	
-
-# PREORDER ITTERATIVE;
-def pre_order_itterative(root):
+def pre_order_recurssive_util(root, stack):
 	if root is None:
 		return
 	
+	stack.append(root.data)
+	pre_order_recurssive_util(root.left, stack)
+	pre_order_recurssive_util(root.right, stack)
+
+def pre_order_itterative(root):
+	if root is None:
+		return
 	stack = deque()
 	stack.append(root)
-
 	while stack:
-		curr = stack.pop()
-		print(curr.data, end=' ')
+		cur = stack.pop()
+		print(cur, end=' ')
 
-		if curr.right:
-			stack.append(curr.right)
-		if curr.left:
-			stack.append(curr.left)
+		if cur.right:
+			stack.append(cur.right)
+		if cur.left:
+			stack.append(cur.left)
+
+	
 
 if __name__ ==  '__main__':
 	node = Node(0)
@@ -56,5 +52,5 @@ if __name__ ==  '__main__':
 	node.right.left.left = Node(9)
 	node.right.left.rigth = Node(10)
 
-	print(pre_order_recurssion(node))
-	print(pre_order_itterative(node))
+	print(pre_order_recurrsive(node))
+	#print(pre_order_itterative(node))

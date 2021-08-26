@@ -16,23 +16,18 @@ class Node:
 # using recurrsion
 # https://favtutor.com/blogs/tree-traversal-python-with-recursion
 
-def inorder_recurssion(root):
-	answer = []
-	inorder_recurssion_util(root, answer)
-	return answer
+def inorder_recurrsive(root):
+	stack = []
+	inorder_recurrsive_util(root, stack)
+	return stack
 
-def inorder_recurssion_util(root, answer):
+def inorder_recurrsive_util(root, stack):
 	if root is None:
 		return
+	inorder_recurrsive_util(root.left, stack)
+	stack.append(root.data)
+	inorder_recurrsive_util(root.right, stack)
 
-	inorder_recurssion_util(root.left, answer)
-	answer.append(root.data)
-	inorder_recurssion_util(root.right, answer)
-	return
-
-
-
-# THROUGH ITTERATIVELY;
 
 def inorder_itterative(root):
 	stack = deque()
@@ -43,7 +38,7 @@ def inorder_itterative(root):
 			cur = cur.left
 		else:
 			cur = stack.pop()
-			print(cur.data, end=' ')
+			print(cur, end=' ')
 			cur = cur.right
 
 
@@ -69,5 +64,5 @@ if __name__ == '__main__':
 	root.right.left = Node(5)
 	root.right.left.right = Node(8)
 	root.right.left.left = Node(7)
-	print(inorder_recurssion(root))
-	print(inorder_itterative(root))
+	print(inorder_recurrsive(root))
+	print(inorder_itt(root))
