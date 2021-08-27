@@ -30,5 +30,5 @@ print('Depth for Search')
 print(depth_for_search(visited_nodes, graph, starting_node))
 
 #Time Complexity
-#The time complexity of the Depth-First Search algorithm is represented within the sort of O(N+ E), where N is that the number of nodes and E is that the number of edges.
+#The time complexity of the Depth-First Search algorithm is represented within the sort of O(N+E), where N is that the number of nodes and E is that the number of edges.
 #The space complexity of the algorithm is O(N).

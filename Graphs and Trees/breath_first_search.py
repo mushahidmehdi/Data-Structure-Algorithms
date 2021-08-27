@@ -26,6 +26,7 @@ visited = []
 queue = []
 
 def breath_for_search(visited, graph, starting_node):
+	# nodes being visited
 	visited.append(starting_node)
 	queue.append(starting_node)
 
