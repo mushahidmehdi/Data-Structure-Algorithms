@@ -1,4 +1,3 @@
-import numpy as np
 # li = [1,24,5,6,767,8]
 # print(li)
 # print(li[-1])
@@ -54,3 +53,6 @@ import numpy as np
 #                    q.append(next)
 #        return dist.get(end)
 #print(find_shortest_path(graph, 'A', 'D'))
+import numpy as np
+print(np.zeros((9,9)))
+
