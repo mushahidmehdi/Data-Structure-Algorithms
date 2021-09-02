@@ -8,20 +8,16 @@ graph = {
 		'E': ['F'],
 		'F': ['C']
 			}
-
-def find_path(graph, start, end, path=[]):
-	if start not in graph:
-		return None
+def find_path(start, end, graph, path=[]):
+	if start not in graph: return None
 	path += [start]
-	if start == end:
-		return path
-
+	if start == end: return path
 	for node in graph[start]:
 		if node not in path:
-			new_path = find_path(graph, node, end, path)
-			if new_path:
-				return new_path
-	return None
+			new_path = find_path(node, end, graph, path)
+			return new_path
 
-pth = find_path(graph, 'A', 'D')
+	return('No path Found')
+
+pth = find_path('A', 'D', graph)
 print(pth)

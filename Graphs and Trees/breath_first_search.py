@@ -6,41 +6,33 @@
 
 
 # The steps of the algorithm work as follow:
-
- # Start by putting any one of the graph’s vertices at the back of the queue.
- # Now take the front item of the queue and add it to the visited list.
- # Create a list of that vertex's adjacent nodes. Add those which are not within the visited list to the rear of the queue.
- # Keep continuing steps two and three till the queue is empty.
-
-
-graph = {
-  '5' : ['3','7'],
-  '3' : ['2', '4'],
-  '7' : ['8'],
-  '2' : [],
-  '4' : ['8'],
-  '8' : []
-}
-
-visited = []
+ # Start by putting any one of the graph’s vertices appending on the queue.
+ # Now itterate over the queue: and in every itteration pop the node from front
+ # and print:
+ # now, check for all neighbours of the given node. if the neighbour isn't in visited list append queue and in visited list.
+ 
+visited = set()
 queue = []
-
 def breath_for_search(visited, graph, starting_node):
-	# nodes being visited
-	visited.append(starting_node)
 	queue.append(starting_node)
-
 	while queue:
 		node = queue.pop(0)
 		print(node, end=' ')
 		for adj in graph[node]:
 			if adj not in visited:
-				visited.append(adj)
 				queue.append(adj)
+				visited.add(adj)
+				
+				
 
-
-
-breath_for_search(visited, graph, starting_node='5')
+if __name__ == '__main__':
+	graph = {'5' : ['3','7'],
+			'3' : ['2', '4'],
+			'7' : ['8'],
+			'2' : [],
+			'4' : ['8'],
+			'8' : []}
+	breath_for_search(visited, graph, starting_node='5')
 
 
 '''

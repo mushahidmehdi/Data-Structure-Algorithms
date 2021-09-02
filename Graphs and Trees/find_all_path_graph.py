@@ -1,6 +1,4 @@
 # 
-from typing import get_args
-
 
 graph = {
 		'A': ['B', 'C'],
