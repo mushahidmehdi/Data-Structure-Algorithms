@@ -1,5 +1,7 @@
-# AVL Tree Vedio explaination:
+# AVL Tree Video explaination:
 # https://www.youtube.com/watch?v=jDM6_TnYIqE
+
+# AVL is self balancing tree.
 
 class AVLNode:
 	def __init__(self, val):
@@ -25,7 +27,8 @@ class AVLTree:
 		 self.get_height(root.right))
 
 		balanced = self.balance(root)
-		# balncing cases:
+		
+		# balancing cases:
 		# Left-Left (LL):
 		if balanced > 1 and key < root.left.val:
 			return self.pull_right(root)

@@ -4,7 +4,6 @@
 # https://www.python.org/doc/essays/graphs/ 
 
 # graphs are easily built in Python out of lists and dictionaries. For instance, here's a simple graph:
-
 graph = {'A': ['B', 'C'],
 		'B': ['C', 'D'],
 		'C': ['D'],
@@ -47,6 +46,7 @@ graph.add_edge(4, 6, 1)
 graph.add_edge(6, 8, 4)
 graph.add_edge(7, 8, 3)
 print(graph)
+
 
 
 # Adjacency Matrix Representation

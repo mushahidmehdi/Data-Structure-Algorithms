@@ -24,14 +24,14 @@ def breath_for_search(visited, graph, starting_node):
 				visited.add(adj)
 				
 				
-
-if __name__ == '__main__':
-	graph = {'5' : ['3','7'],
+graph = {'5' : ['3','7'],
 			'3' : ['2', '4'],
 			'7' : ['8'],
 			'2' : [],
 			'4' : ['8'],
-			'8' : []}
+			'8' : []
+			}
+if __name__ == '__main__':
 	breath_for_search(visited, graph, starting_node='5')
 
 

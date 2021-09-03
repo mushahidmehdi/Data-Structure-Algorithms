@@ -5,8 +5,7 @@
 # parent_node, child_node, leaf_node, 
 
 
-from typing import NewType
-
+# building a binary tree with python; the binary tree can have only two children nodes.
 
 class Node:
 	def __init__(self, data):
@@ -21,12 +20,12 @@ class BinaryTree:
 	def __init__(self):
 		self.root = None
 
-	def insert(self, data, parent):
+	def insert(self, parent, data):
 		add_node = self.new_node(data)
 		
 		if self.root is None:
 			self.root = add_node
-			return add_node
+			return self.root
 		
 
 		if not parent.left:
@@ -44,14 +43,14 @@ class BinaryTree:
 
 def test_binary_tree():
 	bt = BinaryTree()
-	root_node = bt.insert(1, None)
-	n2 = bt.insert(2, root_node)
-	n3 = bt.insert(3, root_node)
-	n4 = bt.insert(4, n2)
-	n5 = bt.insert(5, n2)
-	n6 = bt.insert(6, n3)
-	n7 = bt.insert(30000000, n3)
-	n7 = bt.insert(337, n4)
+	root_node = bt.insert(None, 1)
+	n2 = bt.insert(root_node, 2)
+	n3 = bt.insert(root_node, 3)
+	n4 = bt.insert(n2, 4)
+	n5 = bt.insert(n2, 5)
+	n6 = bt.insert(n3, 6)
+	n7 = bt.insert(n3, 7)
+	n7 = bt.insert(n4, 10)
 	print(bt.root.left.left.left.data)
 
 if __name__ == '__main__':

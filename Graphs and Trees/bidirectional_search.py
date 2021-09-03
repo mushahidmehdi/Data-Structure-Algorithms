@@ -6,9 +6,9 @@
 # here is how we solving this problem..
 # we are beggining from staring node in right direction and from ending node in left direction in and append the node in the queue.
 # the point where both left and right node will be true is the colloding point;
-# we will trace back in the path in both direction from the node which has both node.right and node.left == True;
+# we will traceback in the path in both direction from the node which has both node.right and node.left == True;
 
-# to trace back we will make a create a new fucntion and itterate through each node by moving right direction in one itteration and moving left in another itteration.
+# to trace back we will make a create a new function and itterate through each node by moving right direction in one itteration and moving left in another itteration.
 
 from collections import deque
 
@@ -24,7 +24,7 @@ class Node:
 
 def bidirectional_search(beg_node, end_node):
 	def shortest_path(node):
-		"""tracebacking the path after both BFS collides"""
+		"""Tracebacking the path after both BFS collide"""
 		path = []
 		node_copy = node
 		while node_copy:

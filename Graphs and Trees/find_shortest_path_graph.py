@@ -3,9 +3,9 @@ from collections import deque
 
 
 def find_shortest_path(start, end, graph, path=[]):
-	path = path + [start]
 	if start not in graph:
-		return ('No path')
+		return ('starting point doesn\'t exists')
+	path = path + [start]
 	if start == end:
 		return path
 	shortest = None
@@ -25,6 +25,6 @@ graph = {
 		'D': ['C'],
 		'E': ['F'],
 		'F': ['C']
-}
-
-print(find_shortest_path('A', 'D', graph))
+		}
+if __name__ == '__main__':
+	print(find_shortest_path('A', 'D', graph))

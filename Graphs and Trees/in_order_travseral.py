@@ -2,9 +2,7 @@
 # in in-order traveral first left node get traverse followed by visited then at last the right node get traverse.
 # Inorder Traversal (left, root, right)
 
-
 from collections import deque
-
 
 class Node:
 	def __init__(self, data):

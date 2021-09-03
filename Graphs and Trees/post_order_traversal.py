@@ -43,8 +43,6 @@ def post_order_itterative(root):
 
 	
 
-
-
 if __name__ ==  '__main__':
 	node = Node(0)
 	node.left = Node(1)
