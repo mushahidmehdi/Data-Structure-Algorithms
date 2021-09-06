@@ -59,4 +59,7 @@
 
 # Python program to find the inorder successor in a BST
 
-# A binary tree node
+#strg = "  A binary tree node  " 
+#str = strg.strip()
+#print(str)
+

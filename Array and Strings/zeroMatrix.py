@@ -1,7 +1,9 @@
-# in the given matrix if any of the element is zero change all the elemet in that column and row into 0:
+# in the given matrix if any of the element is zero change all the elemet in its column and row into 0:
+# method:
+# fing the colums and rows where the the values are zeros add it into a set.
+# loop over again over the matrix and if any of the value found in rows or cols them then make the entire row and col changed into 0.
 
 import unittest
-from copy import deepcopy
 
 def zero_matrix(mtx):
 	len_dim = len(mtx)
