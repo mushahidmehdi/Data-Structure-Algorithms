@@ -1,4 +1,4 @@
-# Is Unique 
+# given a string determine whether each element in the string is unique or not;
 
 import unittest
 
