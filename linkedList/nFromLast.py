@@ -1,25 +1,19 @@
-# find nth node from the last of LinkedList.
-#For example, if the input is below list and n = 3, then output is “B”
+# find nth node from the last of a LinkedList.
+# For example, for the below LinkedList and n = 3, then output would be “B”
 # A -> B -> C -> D
 
-from creatingLinkedList import LinkedList, Node
 
-class KFromLast(LinkedList):
-	def k_frm_last(self, k):
-		length = self.__len__()
-		temp = self.head
-		for _ in range(0, length-k):
-			temp = temp.next
-		return temp
+from creatingLinkedList import LinkedList
 
-
-#test_cases = (10, 20, 30, 40, 50)
-#
-#ll = KFromLast()
-#for x in test_cases:
-#	ll.add_last(x)
-#
-#
+def find_n_from_last(ll, node) -> str:
+	curr = ll.head
+	length = len(ll)
+	for _ in range(length - node):
+		curr = curr.next
+	return curr
 
 
+#ll = LinkedList()
+#ll.add_multi(['A', 'B', 'C', 'D', 'E'])
+#print(find_n_from_last(ll, 3))
 

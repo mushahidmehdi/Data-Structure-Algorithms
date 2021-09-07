@@ -62,4 +62,3 @@
 #strg = "  A binary tree node  " 
 #str = strg.strip()
 #print(str)
-

@@ -2,36 +2,39 @@
 
 #  Write a function that adds the two numbers and returns the sum as a linked list.
 #	EXAMPLE
-#	Input: (7-> 1 -> 6) + (5 -> 9 -> 2).That is,617 + 295.
-#	Output: 2 -> 1 -> 9. That is, 912
+#	Input: (1 -> 2 -> 6 -> 9 -> None) + (3 -> 4 -> 2 -> None).
+#   That i: 1269 + 342 = 1611
+#	Output: 
 
-from creatingLinkedList import LinkedList
+from creatingLinkedList import LinkedList, Node
 
-def sum_linked_list(ll1, ll2):
-	n1, n2 = ll1, ll2
-	ll = NumericLinkedList()
-	carry = 0
-	while n1 or n2:
-		result = carry
-		if n1:
-			result += n1.value
-			n1 = n1.next
-		if n2:
-			result += n2.value
-			n2 = n2.next
-		
-		ll.add_last(result % 10)
-		carry = result // 10
-	if carry:
-		ll.add_last(carry)
-	return ll
-		
+class AddTwoLinkedList(LinkedList):
+    def add_two_linkedlists(self, ll1, ll2):
+        cur1 = ll1.head
+        cur2 = ll2.head
+        result = Node(0)
+        linkedlist = result
+        carry = 0
+        while cur1 or cur2 or carry:
+            val1 = (cur1.data if cur1 else 0)
+            val2 = (cur2.data if cur2 else 0)
+            carry , out = divmod(val1+val2+carry, 10)
+            
+            linkedlist.next = Node(out)
+            linkedlist = linkedlist.next
 
-class NumericLinkedList(LinkedList):
-	@classmethod
-	def reverse_integers(cls, integers):
-		integers = [int(x) for x in str(integers)]
-		integers.reverse()
-		return cls(integers)
+            cur1 = (cur1.next if cur1 else None)
+            cur2 = (cur2.next if cur2 else None)
 
+        return result.next
 
+                
+
+ll1 = AddTwoLinkedList()
+ll2 = AddTwoLinkedList()
+ll = AddTwoLinkedList()
+ll1.add_multi([1,2,6,9])
+ll2.add_multi([3,4,2])
+print(ll1)
+print(ll2)
+print(ll.add_two_linkedlists(ll1, ll2))

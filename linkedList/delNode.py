@@ -1,5 +1,5 @@
 # implement an algorithm to delete a node in the middle but not beggineing & last.
-# To Delete a node from a linked list we need to point pointer of the node before deleting node to the pointer of the pointer of the next node to the delete node;
+# To Delete a node from a linked list we need to point the pointer of the node before deleting node to the pointer of the pointer next to the deleting node.
 # 1 -> 2 -> 3 -> 4 -> None (del 2nd node)
 # 1 -> 2 -> 3 -> 4 -> None
 # 	|_______|
