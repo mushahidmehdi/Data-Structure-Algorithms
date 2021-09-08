@@ -1,41 +1,70 @@
-# typological sort allow us to find all the sub nodes of a given node in acyclic directed graph.
+# https://leetcode.com/discuss/general-discussion/1078072/introduction-to-topological-sort
 
-from collections import defaultdict
+# applications: https://leetcode.com/tag/topological-sort/
 
-class TypologicalSort:
-	def __init__(self, vertices):
-		self.vertices = vertices
-		self.graph = defaultdict(list)
+# Topological order is a graph which allowed us to find all the subnotes in a given tree based on neighbour nodes. For instance in a given graph. all the nodes below 30 is topological order of 30.
+"""
+		30
+	   /  \
+	 20    40
+	 /  \   \
+   10  	25    50
+"""
+# implementing DFS
+def topological_order_dfs(graph):
+    # check for indegree of each nodes in the graph;
+    indegree = { node : 0 for node in graph}
+    for node in graph:
+        for neighbor in graph[node]:
+            indegree[neighbor] += 1
 
-	def add_edge(self, node, edge):
-		return self.graph[node].append(edge)
+    # the nodes with no indegree;
+    nodes_with_no_indegree = []
+    for node in indegree:
+        if indegree[node] == 0:
+            nodes_with_no_indegree.append(node)
 
-	def typological_sort_util(self, index, visited, stack):
-		visited[index] = True
-		for i in self.graph[index]:
-			if visited[index] == False:
-				self.typological_sort_util(i, visited, stack)
-		stack.insert(0, index)
+    # start from the root node and move down its subtree
+    topological_order = []
+    while len(nodes_with_no_indegree) > 0:
+        node = nodes_with_no_indegree.pop()
+        topological_order.append(node)
 
-	def typoligical_sort(self):
-		visited = [False]*self.vertices
-		stack = []
-		for index in range(self.vertices):
-			if visited[index] == False:
-				self.typological_sort_util(index, visited, stack)
+    # at each level remove the indegree;
+        for neighbor in graph[node]:
+            indegree[neighbor] -= 1
+            if indegree[neighbor] == 0:
+                nodes_with_no_indegree.append(neighbor)
+    
+    if len(graph) == len(topological_order):
+        return topological_order
+    else:
+        raise Exception('Order of cyclic tree cann\'t be determine ')
 
-		return stack
+
+
+
 
 
 if __name__ == '__main__':
-	graph = TypologicalSort(6)
-	graph.add_edge(1, 3)
-	graph.add_edge(1, 5)
-	graph.add_edge(2, 4)
-	graph.add_edge(2, 5)
-	graph.add_edge(3, 4)
-	graph.add_edge(3, 2)
-	graph.add_edge(4, 5)
-	graph.add_edge(5, 1)
-	graph.add_edge(5, 6)
-	print(graph.typoligical_sort())
+    graph = {'A': ['B', 'C'],
+             'B': ['C', 'D'],
+             'C': ['D'],
+             'D': [],
+             'E': ['F'],
+             'F': []
+			}
+    graph2 = {
+            30 : [20, 40],
+            20 : [10, 25],
+            40 : [50],
+            10 : [],
+            25 : [],
+            50 : []
+            }
+    print(topological_order_dfs(graph))
+    print(topological_order_dfs(graph2))
+       
+
+
+
