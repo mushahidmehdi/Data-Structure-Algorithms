@@ -1,8 +1,10 @@
-# Data Structure which is based in pile on one over the another and follow LastInFirstOur (LIFO):
+# Data Structure which is based in pile on one over the another and follow 
+# LastInFirstOur (LIFO):
 
+from collections import deque
 class Stack:
 	def __init__(self):
-		self.elements = []
+		self.elements = deque()
 
 	def __len__(self):
 		return len(self.elements)
