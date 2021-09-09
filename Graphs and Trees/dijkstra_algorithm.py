@@ -14,14 +14,22 @@
 import math
 import numpy as np
 
-
-
 class Graph:
 	def __init__(self, vertices):
 		self.vertices = vertices
 		self.shortest_pth = [False] * self.vertices
 		self.distance = [math.inf] * self.vertices
 		self.graph = np.zeros((6, 6))
+
+	def dijkstra(self, src):
+		self.distance[src] = 0
+		for _ in range(self.vertices):
+			u = self.shortest_route()
+			self.shortest_pth[u] = True
+			for i in range(self.vertices):
+				if self.graph[u][i] > 0 and self.shortest_pth[i] == False and self.distance[i] > self.distance[u] + self.graph[u][i]:
+					self.distance[i] = self.distance[u] + self.graph[u][i]
+		print(self.route_printing())
 
 	def shortest_route(self):
 		min_val = math.inf
@@ -36,19 +44,8 @@ class Graph:
 		for node in range(self.vertices):
 			print(node,  "\t\t", self.distance[node])
 		
-	def dijkstra(self, src):
-		self.distance[src] = 0
-		for _ in range(self.vertices):
-			u = self.shortest_route()
-			self.shortest_pth[u] = True
-			for i in range(self.vertices):
-				if self.graph[u][i] > 0 and self.shortest_pth[i] == False and self.distance[i] > self.distance[u] + self.graph[u][i]:
-					self.distance[i] = self.distance[u] + self.graph[u][i]
-		print(self.route_printing())
 
 			
-
-
 if __name__ == '__main__':
 	g = Graph(6)
 	graphs = [[0,2,3,0,0,0],[0,2,0,1,4,0],
