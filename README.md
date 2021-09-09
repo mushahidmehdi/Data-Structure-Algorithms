@@ -4,6 +4,9 @@
 
 This repository contains Data Structure and algorithms and their solutions using python language along refrence toward most useful blog articles and vedios.
 Most of questions are solution of `How to crack the coding interview` along `Basic Algorithms and data Structure`.
+
+
+### Basic Data Structure
 - Strings and Array
 - Queues and Stacks
 - LinkedList
