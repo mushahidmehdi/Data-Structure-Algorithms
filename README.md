@@ -2,7 +2,8 @@
 
 ![GitHub Pipenv locked Python version (branch)](https://img.shields.io/github/pipenv/locked/python-version/mushahidmehdi/Full-Stack-Web-Application/main)
 
-This repository contains Data Structure and algorithms and their solutions using python language along refrence to most useful blog articles and vedios.
+This repository contains Data Structure and algorithms and their solutions using python language along refrence to most useful blog articles and vedios, I found my journey to being a self taugh programmer.
+
 Most of questions are solution of `How to crack the coding interview` along `Basic Algorithms and data Structure`.
 
 
