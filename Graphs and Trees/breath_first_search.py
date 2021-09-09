@@ -10,29 +10,35 @@
  # Now itterate over the queue: and in every itteration pop the node from front
  # and print:
  # now, check for all neighbours of the given node. if the neighbour isn't in visited list append queue and in visited list.
- 
-visited = set()
-queue = []
-def breath_for_search(visited, graph, starting_node):
-	queue.append(starting_node)
+
+from collections import deque
+def bsf(start, graph):
+	queue = [start]		# Last In First Out.
+	visited = set()
+	visited.add(start)
 	while queue:
-		node = queue.pop(0)
+		node = queue.pop(0)	# first out
 		print(node, end=' ')
-		for adj in graph[node]:
-			if adj not in visited:
-				queue.append(adj)
-				visited.add(adj)
-				
-				
-graph = {'5' : ['3','7'],
-			'3' : ['2', '4'],
-			'7' : ['8'],
-			'2' : [],
-			'4' : ['8'],
-			'8' : []
-			}
+		for i in graph[node]:
+			#if i not in graph:
+				#continue
+			if i not in visited:
+				queue.append(i)
+				visited.add(i)
+	return visited
+
 if __name__ == '__main__':
-	breath_for_search(visited, graph, starting_node='5')
+	graph = {
+		'A': ['B', 'C'],
+		'B': ['A', 'E', 'D'],
+		'C': ['F', 'G'],
+		'E': ['H'],
+		'D': [],
+		'F': [],
+		'G': [],
+		'H': [],
+	}
+	print(bsf('A', graph))
 
 
 '''

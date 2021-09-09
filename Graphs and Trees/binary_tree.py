@@ -26,7 +26,6 @@ class BinaryTree:
 		if self.root is None:
 			self.root = add_node
 			return self.root
-		
 
 		if not parent.left:
 			parent.left = add_node

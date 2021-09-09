@@ -1,4 +1,6 @@
+# https://en.wikipedia.org/wiki/Bidirectional_search
 
+# Bidirectional search is a graph search algorithm that finds a shortest path from an initial vertex to a goal vertex in a directed graph. 
 # Bidirectional search: is used to find the shortest path between a source and destination node. It operates by essentially running two simultaneous breadth-first searches, one from each node. When their searches collide, we have found a path. 
 
 
@@ -8,7 +10,7 @@
 # the point where both left and right node will be true is the colloding point;
 # we will traceback in the path in both direction from the node which has both node.right and node.left == True;
 
-# to trace back we will make a create a new function and itterate through each node by moving right direction in one itteration and moving left in another itteration.
+# to trace back we will make a create a new function and traversing through each node by moving right direction in one itteration and moving left in another itteration.
 
 from collections import deque
 
@@ -17,8 +19,8 @@ class Node:
 	def __init__(self, data, neighbors=[]):
 		self.data = data
 		self.neighbors = neighbors
-		self.right_parent = None
-		self.left_parent = None
+		self.right = None
+		self.left = None
 		self.visited_right = False
 		self.visited_left = False
 
@@ -29,10 +31,10 @@ def bidirectional_search(beg_node, end_node):
 		node_copy = node
 		while node_copy:
 			path.append(node_copy.data)
-			node_copy = node_copy.left_parent
+			node_copy = node_copy.left
 		while node:
 			path.append(node.data)
-			node = node.right_parent
+			node = node.right
 		path.reverse()
 		del path[-1]
 		return path
@@ -51,13 +53,14 @@ def bidirectional_search(beg_node, end_node):
 			return shortest_path(node)
 
 		for each_node in node.neighbors:
+			# if the search is moving right, make right node == True
 			if node.visited_right == True and not each_node.visited_right:
-				each_node.right_parent = node
+				each_node.right = node
 				each_node.visited_right = True
 				queue.append(each_node)
-
+			# if the search is moving to left, meke left node visited == True
 			if node.visited_left == True and not each_node.visited_left:
-				each_node.left_parent = node
+				each_node.left = node
 				each_node.visited_left = True
 				queue.append(each_node)
 	return False

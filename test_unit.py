@@ -61,85 +61,81 @@
 
 #strg = "  A binary tree node  " 
 #str = strg.strip()
-#print(str)
 
+#def bidirectional_search(src, des):
+#	def backtrack(node):
+#		path = []
+#		copy = node
+#		while copy:
+#			path.append(copy.data)
+#			copy = copy.right
+#		while node:
+#			path.append(node.data)
+#			node = node.left
+#		path.reverse()
+#		del path[-1]
+#		return path
+#
+#	queue = []
+#	queue.append(src)
+#	queue.append(des)
+#	src.visit_left = True
+#	des.visit_right = True
+#
+#	while len(queue) > 0:
+#		node = queue.pop()
+#
+#		if node.visit_right and node.visit_left:
+#			return backtrack(node)
+#
+#		for neighbor in node.neighbors:
+#			if node.visit_right and not neighbor.visit_right:
+#				neighbor.right = node
+#				neighbor.visit_right = True
+#				queue.append(neighbor)
+#			if node.visit_left == True and not neighbor.visit_left:
+#				neighbor.left = node
+#				neighbor.visit_left = True
+#				queue.append(neighbor)
+#	return False
+	
 
-class Node:
-	def __init__(self , val):
-		self.val = val
-		self.right = None
-		self.left = None
-		self.height = 1
+# if __name__ == '__main__':
+# 	n1 = Node(1)
+# 	n2 = Node(2)
+# 	n3 = Node(3)
+# 	n4 = Node(4)
+# 	n5 = Node(5)
+# 	n6 = Node(6)
+# 	n7 = Node(7)
+# 	n8 = Node(8)
+# 	n9 = Node(9)
+# 	n10 = Node(10)
+# 	n1.neighbors = [n3, n5]
+# 	n2.neighbors = [n6, n7]
+# 	n3.neighbors = [n2, n8]
+# 	# n5.neighbors = [n4, n6]
+# 	n4.neighbors = [n5, n6, n4]
+# 	n6.neighbors = [n7, n9]
+# 	print(bidirectional_search(n1, n7))
+graph = {
+  '5' : ['3','7'],
+  '3' : ['2', '4'],
+  '7' : ['8'],
+  '2' : [],
+  '4' : ['8'],
+  '8' : []
+}
 
-class AVLTree:
-	def insert(self, root, key):
-		if root is None:
-			return Node(key)
-		if key <= root.val:
-			root.left = self.insert(root.left, key)
-		else:
-			root.right = self.insert(root.right, key)
+visited = set() # Set to keep track of visited nodes of graph.
 
-		root.height = 1+ max(self.get_height(root.left), self.get_height(root.right))
-		balance = self.get_balance(root)
+def dfs(visited, graph, node):  #function for dfs 
+    if node not in visited:
+        print (node)
+        visited.add(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
 
-		# Cases:
-		if balance > 1 and key < root.left.val:
-			return self.pull_right(root)
-		if balance > 1 and key > root.left.val:
-			root.left = self.pull_left(root.left)
-			return self.pull_right(root)
-
-		if balance < -1 and key > root.right.val:
-			return self.pull_left(root)
-		if balance < -1 and key < root.right.val:
-			root.right = self.pull_right(root.right)
-
-		return root
-
-	def pull_right(self, root):
-		y = root.left
-		t = y.right
-		y.right = root
-		root.left = t
-
-		root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
-		y.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
-		return y
-
-	def pull_left(self, root):
-		y = root.right
-		t = y.left
-		y.left = root
-		root.right = t
-
-		root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
-		y.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
-
-		return y
-
-	def get_height(self, root):
-		if not root: return 0
-		return root.height
-
-	def get_balance(self, root):
-		if not root: return 0
-		return self.get_height(root.left) - self.get_height(root.right)
-
-	def pre_order(self, root):
-		if not root: return 
-		print(f'{root.val}', end=' ')
-		self.pre_order(root.left)
-		self.pre_order(root.right)
-		
-if __name__ == '__main__':
-	tree = AVLTree()
-	root = None
-	root = tree.insert(root, 10)
-	root = tree.insert(root, 20)
-	root = tree.insert(root, 25)
-	root = tree.insert(root, 30)
-	root = tree.insert(root, 40)
-	root = tree.insert(root, 50)
-	# tree.pre_order(root)
-	print(tree.get_height(root))
+# Driver Code
+print("Following is the Depth-First Search")
+dfs(visited, graph, '5')
