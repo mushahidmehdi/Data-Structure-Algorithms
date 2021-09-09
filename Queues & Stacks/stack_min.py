@@ -18,7 +18,7 @@ class MinimumStack:
 
 	def pop(self):
 		if self.is_empty():
-			return ('given stack is empty')
+			return ('stack is empty')
 		top = self.main_stack.pop()
 		if top == self.auxi_stack[-1]:
 			self.auxi_stack.pop()
@@ -42,8 +42,6 @@ if __name__ == '__main__':
 	stack.push(8)
 	stack.push(4)
 	stack.push(9)
-	print(stack.pop())
-	print(stack.pop())
 	print(stack.pop())
 	print(stack.min())
 

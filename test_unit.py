@@ -62,3 +62,84 @@
 #strg = "  A binary tree node  " 
 #str = strg.strip()
 #print(str)
+
+
+class Node:
+	def __init__(self , val):
+		self.val = val
+		self.right = None
+		self.left = None
+		self.height = 1
+
+class AVLTree:
+	def insert(self, root, key):
+		if root is None:
+			return Node(key)
+		if key <= root.val:
+			root.left = self.insert(root.left, key)
+		else:
+			root.right = self.insert(root.right, key)
+
+		root.height = 1+ max(self.get_height(root.left), self.get_height(root.right))
+		balance = self.get_balance(root)
+
+		# Cases:
+		if balance > 1 and key < root.left.val:
+			return self.pull_right(root)
+		if balance > 1 and key > root.left.val:
+			root.left = self.pull_left(root.left)
+			return self.pull_right(root)
+
+		if balance < -1 and key > root.right.val:
+			return self.pull_left(root)
+		if balance < -1 and key < root.right.val:
+			root.right = self.pull_right(root.right)
+
+		return root
+
+	def pull_right(self, root):
+		y = root.left
+		t = y.right
+		y.right = root
+		root.left = t
+
+		root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
+		y.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
+		return y
+
+	def pull_left(self, root):
+		y = root.right
+		t = y.left
+		y.left = root
+		root.right = t
+
+		root.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
+		y.height = 1 + max(self.get_height(root.left), self.get_height(root.right))
+
+		return y
+
+	def get_height(self, root):
+		if not root: return 0
+		return root.height
+
+	def get_balance(self, root):
+		if not root: return 0
+		return self.get_height(root.left) - self.get_height(root.right)
+
+	def pre_order(self, root):
+		if not root: return 
+		print(f'{root.val}', end=' ')
+		self.pre_order(root.left)
+		self.pre_order(root.right)
+		
+if __name__ == '__main__':
+	tree = AVLTree()
+	root = None
+	root = tree.insert(root, 10)
+	root = tree.insert(root, 20)
+	root = tree.insert(root, 25)
+	root = tree.insert(root, 30)
+	root = tree.insert(root, 40)
+	root = tree.insert(root, 50)
+	# tree.pre_order(root)
+	print(tree.get_height(root))

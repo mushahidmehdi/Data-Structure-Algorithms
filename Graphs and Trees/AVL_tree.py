@@ -71,6 +71,7 @@ class AVLTree:
 		y.height = 1 + max(self.get_height(y.left), self.get_height(y.right))
 		node.height = 1 + max(self.get_height(node.right), self.get_height(node.left))
 		return y
+
 	# getter method to the heigth of tree.
 	def get_height(self, root):
 		if not root: return 0
@@ -111,4 +112,7 @@ if __name__ == '__main__':
 	"""
 
 
-
+# other self balancing trees
+# 1_ Red-black trees
+# 2_ Splay trees
+# 3_ Treaps
