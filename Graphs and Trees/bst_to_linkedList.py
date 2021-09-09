@@ -1,6 +1,20 @@
 # Given a binary tree, design an algorithm which creates a linked list of all the nodes at each depth (e.g., if you have a tree with depth D, you'll have D linked lists).
 
-# to solve this problem we will create a dictionary; level as a key therefore we will have D keys and list a value and append all node on that level into the list. and used that dictionary to crete new linked lists.
+# To solve this problem; we will create two functions; first to linked the nodes of same parent by next pointer; second function to linked the same level node with differnt parent nodes.
+
+# Mind map:
+# traverse through to the both children if they exists and and point left node toward the right node. if one one child is there connet to other parent level next node and check if there is right or left childret and make pointer toward them
+# nove down deep the next level in tree recursively.
+''' Construct the following tree
+        1 --> None
+        /   \
+       2 --  3 --> None
+      / \   / \
+     4 - 5-12 - 6 --> None
+      \       /
+       7 --- 8 --> None
+'''
+
 
 # A class to store a binary tree node
 class Node:
@@ -8,7 +22,7 @@ class Node:
         self.data = data
         self.left = None
         self.right = None
-        self.next = None
+        self.next = None 
  
  
 # Function to print a given linked list
@@ -17,23 +31,6 @@ def printList(head):
         print(head.data, end=" —> ")
         head = head.next
     print("None")
- 
-# Function to perform inorder traversal on a given binary tree where nodes
-# at the same level are linked together in the form of a linked list
-def inorder(root):
-    if root is None:
-        return
-    inorder(root.left)
- 
-    # print current node and its next node
-    print(root.data, end=" —> ")
-    if root.next:
-        print(root.next.data, end='')
-    else:
-        print("None")
-    inorder(root.right)
- 
- 
 # Recursive function to find the first node in the next level of a given root node
 def findNextNode(root):
     # base case
@@ -79,8 +76,8 @@ if __name__ == '__main__':
            1
          /   \
         2     3
-       / \     \
-      4   5     6
+       / \   / \
+      4   5 12  6
        \       /
         7     8
     '''
@@ -90,6 +87,7 @@ if __name__ == '__main__':
     root.right = Node(3)
     root.left.left = Node(4)
     root.left.right = Node(5)
+    root.right.left = Node(12)
     root.right.right = Node(6)
     root.left.left.right = Node(7)
     root.right.right.left = Node(8)
