@@ -1,4 +1,4 @@
-# 
+#  given a graph find all paths given between to given nodes.
 
 graph = {
 		'A': ['B', 'C'],
@@ -12,7 +12,7 @@ graph = {
 def find_all_path(start, end, graph, path=[]):
 	path = path + [start]
 	if start not in graph:
-		return ('No path')
+		raise Exception('Please Enter staring point within graph.')
 	if start == end:
 		return [path]
 	paths = []
@@ -22,5 +22,5 @@ def find_all_path(start, end, graph, path=[]):
 			for pth in new_paths:
 				paths.append(pth)
 	return paths
-
-print(find_all_path('A', 'D', graph))
+if __name__ == '__main__':
+	print(find_all_path('A', 'D', graph))
