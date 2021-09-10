@@ -11,7 +11,6 @@ There are few System Design and Relational Database Management System related pr
 
 Basic algorithms and Data Structure to computer science problems:
 - Fibonacci number series
-- Knapsack problem
 - Tower of Hanoi
 - All pair shortest path by Floyd-Warshall
 - Shortest path by Dijkstra
