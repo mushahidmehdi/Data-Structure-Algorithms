@@ -14,7 +14,6 @@ Basic algorithms and Data Structure to computer science problems:
 - Tower of Hanoi
 - All pair shortest path by Floyd-Warshall
 - Shortest path by Dijkstra
-- Project scheduling
 
 Array:
 - Kaden's Algorithm
