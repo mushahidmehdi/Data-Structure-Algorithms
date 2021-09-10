@@ -4,6 +4,7 @@
 
 This repository contains Data Structure and algorithms and their solutions using python language along refrence to most useful blogs articles and videos.
 Most of questions are Basic Algorithms and data Structure concepts, along advance level solution of `How to crack the coding interview`.
+There are few System Design and Relational Database Management System related problems/solutions. 
 
 
 ## Data Structure.
