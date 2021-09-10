@@ -3,7 +3,7 @@
 ![GitHub Pipenv locked Python version (branch)](https://img.shields.io/github/pipenv/locked/python-version/mushahidmehdi/Full-Stack-Web-Application/main)
 
 This repository contains Data Structure and algorithms and their solutions using python language along refrence to most useful blogs articles and videos.
-Most of questions are Basic Algorithms and data Structure concepts, along advance level solution of `How to crack the coding interview`.
+Most of questions are Basic Algorithms and data Structure concepts, along advance level solution of [`How to crack the coding interview`](https://cin.ufpe.br/~fbma/Crack/Cracking%20the%20Coding%20Interview%20189%20Programming%20Questions%20and%20Solutions.pdf).
 There are few System Design and Relational Database Management System related problems/solutions. 
 
 
