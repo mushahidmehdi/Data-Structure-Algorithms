@@ -15,12 +15,10 @@ Basic algorithms and Data Structure to computer science problems:
 - All pair shortest path by Floyd-Warshall
 - Shortest path by Dijkstra
 
-Array:
+Array & String:
 - Kaden's Algorithm
 - Merge Over lapping interval
 - Rotate Matrix
-
-String: 
 - Pattern matching algo -- KMP Rabin Karp
 - Using string builder class -- Add, multiply string.
 - string compression.
