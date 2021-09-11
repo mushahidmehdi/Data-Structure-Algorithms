@@ -28,13 +28,11 @@ LinkedList:
 - Detecting cycle in linkedlist -- Floyed
 - Reverse a Linkedlist.
 
-Stack
+Stack & Queue:
 - Implementing a Stack
 - Balance parenthsis.
 - Traping Rain Water.
 - Implement Min Stack.
-
-Queue
 - Implement a Queue + Deque.
 - Sliding Window maximun
 - Implement Breath First Search.
