@@ -17,7 +17,6 @@ Basic algorithms and Data Structure to computer science problems:
 
 Array:
 - Kaden's Algorithm
-- N/2 greater Number
 - Merge Over lapping interval
 - Rotate Matrix
 
