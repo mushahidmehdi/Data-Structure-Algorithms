@@ -16,12 +16,18 @@ Basic algorithms and Data Structure to computer science problems:
 - Shortest path by Dijkstra
 
 Array & String:
-- Kaden's Algorithm
-- Merge Over lapping interval
-- Rotate Matrix
-- Rabin Karp
-- Using string builder class -- Add, multiply string.
-- string compression.
+- checkpermutation.py
+- lavenstein_distance.py
+- max_sub_array.py
+- merge_overlaping_interv.py
+- palindrome_or_not.py
+- rabin_karp_algo.py
+- rotate_matrix_ninty.py
+- stringCompression.py
+- uniqueCharInString.py
+- zeroMatrix.py 
+- urlify.py 
+
 
 LinkedList:
 - Implement linked list.
