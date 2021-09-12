@@ -16,23 +16,31 @@ Basic algorithms and Data Structure to computer science problems:
 - Shortest path by Dijkstra
 
 Array & String:
-- checkpermutation.py
-- lavenstein_distance.py
-- max_sub_array.py
-- merge_overlaping_interv.py
-- palindrome_or_not.py
-- rabin_karp_algo.py
-- rotate_matrix_ninty.py
-- stringCompression.py
-- uniqueCharInString.py
-- zeroMatrix.py 
-- urlify.py 
+- Checking for Permutation
+- Lavenstein Distance -- strings differences.
+- Sum of Max Sub Array
+- Merge Overlapping Intervals
+- Palindrome or Not
+- Rabin Karp Algorithm
+- Rotate Matrix 90 °
+- Compress String by number of itteration
+- If all character in String is Unique.
+- Zero Column & Row
+- Urlify
 
 
 LinkedList:
 - Implement linked list.
 - Detecting cycle in linkedlist -- Floyed
 - Reverse a Linkedlist.
+- Deleting Node
+- n From Last
+- Palindrome
+- Partition
+- Remove Duplicate
+- Sum Linkedlist
+
+
 
 Stack & Queue:
 - Implementing a Stack
