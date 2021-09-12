@@ -19,7 +19,7 @@ Array & String:
 - Kaden's Algorithm
 - Merge Over lapping interval
 - Rotate Matrix
-- Pattern matching algo -- KMP Rabin Karp
+- Rabin Karp
 - Using string builder class -- Add, multiply string.
 - string compression.
 
