@@ -117,5 +117,3 @@
 # 	# n5.neighbors = [n4, n6]
 # 	n4.neighbors = [n5, n6, n4]
 # 	n6.neighbors = [n7, n9]
-
-

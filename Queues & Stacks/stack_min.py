@@ -1,5 +1,11 @@
 # How would you design a stack which, in addition to push and pop, has a function min which returns the minimum element? Push, pop and min should all operate in 0(1) time.
 
+# in this vedio expalins the nuance in very subtle way:
+# https://www.youtube.com/watch?v=ufwPuyxkNVE
+# in the nut shell, push in main_stack always but in auxi_stack only if < than top value same for pop if both value are == pop from both else only from main.
+
+
+
 from collections import deque
 
 class MinimumStack:
@@ -35,13 +41,13 @@ class MinimumStack:
 
 if __name__ == '__main__':
 	stack = MinimumStack()
-	print(stack.is_empty())
-	stack.push(6)
-	print(stack.is_empty())
-	stack.push(7)
-	stack.push(8)
-	stack.push(4)
-	stack.push(9)
+	#print(stack.is_empty())
+	#stack.push(6)
+	#print(stack.is_empty())
+	#stack.push(7)
+	#stack.push(8)
+	#stack.push(4)
+	#stack.push(9)s
 	print(stack.pop())
 	print(stack.min())
 
