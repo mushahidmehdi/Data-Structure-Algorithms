@@ -117,3 +117,15 @@
 # 	n5.neighbors = [n4, n6]
 # 	n4.neighbors = [n5, n6, n4]
 # 	n6.neighbors = [n7, n9]
+# A class to store a BST node
+
+''' Construct the following tree
+			15
+		   /  \
+		  /    \
+		 10      20
+		/ \     / \
+	   /   \   /   \
+	  8    12 16   25
+'''
+ 
