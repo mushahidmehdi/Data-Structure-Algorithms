@@ -114,6 +114,6 @@
 # 	n1.neighbors = [n3, n5]
 # 	n2.neighbors = [n6, n7]
 # 	n3.neighbors = [n2, n8]
-# 	# n5.neighbors = [n4, n6]
+# 	n5.neighbors = [n4, n6]
 # 	n4.neighbors = [n5, n6, n4]
 # 	n6.neighbors = [n7, n9]
