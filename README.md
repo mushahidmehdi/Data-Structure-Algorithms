@@ -82,19 +82,6 @@ Graph:
 - Kurskal Algo.
 - Unique Island Problem.
 
-Two Pointer algorithem.
-- 3 sum
-- Container with most water.
-
-Recussion and Backtracking.
-- Sudoku solver.
-- N-Queen Problem.
-- permutation and combinations.
-
-Bit Manipulation
-- Find one non-reapeating number.
-- count 1 bits in anumber.
-
 Divide and Conquer.
 - Median of two sorted array.
 
@@ -104,49 +91,6 @@ Dynamic Programming.
 - Longest increasing subsequence.
 - Matrix chain maltipication
 - Coin change Problem
-
-
-Most networking algorithms use the greedy approach. Here is a list of few of them:
-- Travelling Salesman Problem
-- Prim's Minimal Spanning Tree Algorithm
-- Kruskal's Minimal Spanning Tree Algorithm
-- Dijkstra's Minimal Spanning Tree Algorithm
-- Graph - Map Coloring
-- Graph - Vertex Cover
-- Knapsack Problem
-- Job Scheduling Proble
-- candy distribution.
-- Gas Station.
-
-Operating System.
-- Basic of Threads
-- Process schedule algo.
-- Critical Section Problem.
-- Deadlock
-- Memory Manangement.
-- Disk Schdule algo.
-
-RDBMS Concepts:
-- Types of keys: Candidate, Super, Forign.
-- Normal Form
-- Jouns
-- SQL quries.
-- ACID Properties.
-- Index: B Tree.
-
-Low Level System Design.
-- Class ER Diagram.
-- OOPs Concepts.
-- Design Elevator system, Parking lot
-
-Hight Level System Design.
-- Scaling.
-- Distributed System.
-- MicroSerice and Monolethic archetecture.
-- Load balancer.
-- Message Queue.
-- Design Whatapp, Tinder and Uber.
-
 
 
 
