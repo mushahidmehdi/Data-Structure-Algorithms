@@ -1,8 +1,6 @@
 # Given a sets of tasks with deadlines and total profit, design a schedule a list in a manner that maximize the profit.
 # Remeber each task will take only unit time.
 
-# https://www.techiedelight.com/job-sequencing-problem-deadlines/
-
 # As we can see that this problem suggests to generate maxi profit for given time, therefore this is optimization problem other word greedy algorithm.
 
 # To Solve: We will arrage all the profit in decending order and check for the deathline slot and assign the higest profit job before its deadline.
@@ -43,3 +41,11 @@ def main():
 
 if __name__ == '__main__':
 	main()
+
+
+
+# Theoritical Explanation:
+# https://www.youtube.com/watch?v=zPtI8q9gvX8
+
+# python code explanation:
+# https://www.techiedelight.com/job-sequencing-problem-deadlines/

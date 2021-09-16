@@ -1,4 +1,5 @@
-# Dynamic Programming: is a set/collection of technique that optimze the algorithm.
+#  Dynamic programming is mostly just a matter of taking a recursive algorithm and finding the overlapping subproblems (that is, the repeated calls). You then cache those results for future recursive calls. As we did in Fabonacci in basics.
+#  Dynamic Programming: is a set/collection of technique that optimze the algorithm.
 # Recurssion
 # Memoization/Cacheing
 # Bottom-up.
