@@ -81,7 +81,11 @@ Graph and Trees:
 - Validate BinarySearchTree 
 
 Divide and Conquer.
-- Median of two sorted array.
+- Binary Search
+- Closest Pair
+- Merge Sort
+- Quick Sort
+
 
 Dynamic Programming.
 - 0/1 Knapstack.
