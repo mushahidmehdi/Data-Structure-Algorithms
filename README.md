@@ -95,5 +95,9 @@ Dynamic Programming.
 - Max Amount Min Coins
 - Robots all path in matrix
 
+Greedy Algorithm
+- Task Sequencing -- max profit
+- Knap Stack Algorithm
+
 
 
