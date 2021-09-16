@@ -88,10 +88,12 @@ Divide and Conquer.
 
 
 Dynamic Programming.
-- 0/1 Knapstack.
-- Longest increasing subsequence.
-- Matrix chain maltipication
-- Coin change Problem
+- Climbing UpStairs
+- Ksnap Algorithm
+- Longest Inrcresign Sub array
+- Magic Index
+- Max Amount Min Coins
+- Robots all path in matrix
 
 
 
