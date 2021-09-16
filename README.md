@@ -99,5 +99,12 @@ Greedy Algorithm
 - Task Sequencing -- max profit
 - Knap Stack Algorithm
 
+List Sorting Algorithms
+- Bubble Sort
+- Insersion Sort
+- Merge Sort
+- Quick Sort
+- Selection Sort
+- Topological Sort
 
 
