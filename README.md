@@ -25,6 +25,7 @@ Array & String:
 - Rotate Matrix 90 °
 - Compress String by number of itteration
 - If all character in String is Unique.
+- Maximun water container.
 - Zero Column & Row
 - Urlify
 
@@ -52,39 +53,35 @@ Stack & Queue:
 - Implement Breath First Search.
 - Implement Level Order in Binary Tree.
 
-Priority Queue or Heap:
-- Implement heap data structure.
-- Connect n ropes with min cost.
-- LRU & LFU cache.
 
-Set & Map:
-- Internal working of MashMap.
-- 4-sum.
-- Longest substing without repeat.
-
-Binary Tree:
-- Implement Insert, delete, traverse.
-- Inverse a binary tree.
-- Lowest common ancestor.
-
-Binary Search Tree.
-- Implementation.
-- Check if a tree is binary Search or Not.
-- AVL Tree.
-
-Graph:
-- Implementation.
-- BFS and DFS traversal
-- Topological Sorting.
-- Bellman Ford Algo.
-- Dijksa's Algo.
-- Prim's Algo
-- Kurskal Algo.
-- Unique Island Problem.
+Graph and Trees:
+- AVL Tree (self balancing Tree)
+- Bidirectional Search 
+- Implementing Tinary Tree
+- Implementing Binary Search Tree
+- Breath First Search 
+- Binary Search Tree To Linkedlist
+- Depth First Search
+- Dijsktra Algorithm
+- Finding all path in Graph
+- Finding Two Points in Graph
+- Finding Shorest Path in Graph
+- Checking Tree is Balanced or Not
+- InOrder Traveral
+- Inverting a Binary Tree.
+- Level order Traversal
+- Lowest common Ancestor in Tree
+- Min Cost Spinning Tree -- Prims Algorithm
+- Number of Islands
+- PostOrder Travseral
+- PreOrder Traversal
+- Sorted Array to BinarySearchTree
+- Successor Node
+- Implementing Tree
+- Validate BinarySearchTree 
 
 Divide and Conquer.
 - Median of two sorted array.
-
 
 Dynamic Programming.
 - 0/1 Knapstack.
