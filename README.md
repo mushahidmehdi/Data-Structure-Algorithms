@@ -31,7 +31,7 @@ Array & String:
 
 LinkedList:
 - Implement linked list.
-- Detecting cycle in linkedlist -- Floyed
+- Detecting cycle in linkedlist -- Floyed  
 - Reverse a Linkedlist.
 - Deleting Node
 - n From Last
