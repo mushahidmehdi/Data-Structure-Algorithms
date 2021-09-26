@@ -1,62 +1,69 @@
 # dijkstra is path finding algorithm which determines the shortest route or path between two nodes, given the cost value of each path.
 
 # this algorithm used the idea of relaxation which means that
-# d[u] + cost(u, v) = d[v]
+#  d[v] = d[u] + cost(u, v)
 # src--> u -- > v 
 
 # Procedure to solve dijkstra alghorithm in python.
-# 1) Create two sets shortest_path -- nodes withs shorest path from source to distination initially the shortest path will be False, and distance set -- keep track of Shortest route from source to destiney.
+# 1) Create two sets shortest_path -- nodes withs shortest path from source  initially value will be False. Distance -- keep track of Shortest route from source to other nodes, Initialize all distance vaules as infinity bcoz any distance would be less than than inf.
 
-# 2) Assign a distance value to all vertices in the input graph.
-# Initialize all distance vaules as infinite at the beggining bcoz any distance would be less than than inf. Assign distance value as 0 for the source vertex so that we can picked it first.
+# 2)  Assign distance value as 0 for the source vertex so that we can picked it first.
 
 # 3) While shortest_path doesn’t include all vertices => True: 
 # Pick a vertex u which is not there in shortest_path and has minimum distance value, add u to shortest_path.
 # Update distance value of all adjacent vertices of u. To update the distance values, iterate through all adjacent vertices. For every adjacent vertex v, if the sum of a distance value of u (from source) and weight of edge u-v, is less than the distance value of v, then update the distance value of v.
 
-import math
+
 import numpy as np
 
-class Graph:
+class Algorithm:
 	def __init__(self, vertices):
 		self.vertices = vertices
-		self.shortest_pth = [False] * self.vertices
-		self.distance = [math.inf] * self.vertices
-		self.graph = np.zeros((6, 6))
+		self.dist = [float('inf')]*vertices
+		self.visited = [False]*vertices
+		self.matrix = [[0]*vertices]*vertices
 
 	def dijkstra(self, src):
-		# initialize the src distance == 0
-		self.distance[src] = 0
+		self.dist[src] = 0
 		for _ in range(self.vertices):
-			u = self.shortest_route()
-			self.shortest_pth[u] = True
+			u = self.shortest_path()
+			self.visited[u] = True
 			for i in range(self.vertices):
-				if self.graph[u][i] > 0 and self.shortest_pth[i] == False and self.distance[i] > self.distance[u] + self.graph[u][i]:
-					self.distance[i] = self.distance[u] + self.graph[u][i]
-		print(self.route_printing())
+				if self.matrix[u][i] > 0 and self.visited[i] == False and self.dist[i] > self.dist[u] + self.matrix[u][i]:
+					self.dist[i] = self.dist[u] + self.matrix[u][i]
 
-	def shortest_route(self):
-		min_val = math.inf
+	def shortest_path(self):
+		shortestPath = float('inf')
 		for i in range(self.vertices):
-			if self.distance[i] < min_val and self.shortest_pth[i] == False:
-				min_val = self.distance[i]
+			if self.dist[i] < shortestPath and self.visited[i] == False:
+				shortestPath = self.dist[i]
 				min_index = i
 		return min_index
 
-	def route_printing(self):
-		print('Vertices \tDistances from source')
+	def print_path(self):
+		print('Nodes: \t\t Distance')
 		for node in range(self.vertices):
-			print(node,  "\t\t", self.distance[node])
+			print(f'{node} \t\t {self.dist[node]}')
 		
+	def add_edges(self):
+		for row in range(self.vertices):
+			for col in range(self.vertices):
+				edge = int(input(f'Enter edge between ({row},{col}): '))
+				self.matrix[col][row] = edge
+		return self.matrix
 
-			
+def main():
+	algo = Algorithm(6)
+	algo.matrix = [[0,2,3,0,0,0],
+			  [0,2,0,1,4,0],
+			  [3,0,0,5,0,0],
+			  [0,1,5,0,0,2],
+			  [0,4,0,0,0,3],
+			  [0,2,0,0,3,0]
+			]
+	#algo.add_edges()
+	algo.dijkstra(3)
+	print(algo.print_path())
+
 if __name__ == '__main__':
-	g = Graph(6)
-	graphs = [[0,2,3,0,0,0],[0,2,0,1,4,0],
-			[3,0,0,5,0,0],[0,1,5,0,0,2],
-			[0,4,0,0,0,3],[0,2,0,0,3,0]]
-	g.graph = graphs
-	g.dijkstra(3)	
-	
-    
-
+	main()

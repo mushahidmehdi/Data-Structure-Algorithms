@@ -14,7 +14,6 @@ def zero_matrix(mtx):
 			if mtx[row][col] == 0:
 				rows.add(row)
 				cols.add(col)
-
 	for r in range(len_dim):
 		for c in range(len_dim):
 			if (r in rows) or (c in cols):

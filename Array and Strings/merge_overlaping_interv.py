@@ -1,15 +1,13 @@
 # merge overlaping interval: Explanation.
 # https://www.educative.io/m/merge-overlapping-intervals
 
+# sort all the intervals with beggining value.
+
 from collections import deque
 class Pair:
 	def __init__(self, begin, end):
 		self.begin = begin
 		self.end = end
-
-	def __str__(self):
-		return str((self.begin, self.end))
-
 
 def merge_overlap_interval(pair):
 	stack = deque()

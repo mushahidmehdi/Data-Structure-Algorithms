@@ -1,6 +1,5 @@
 #  Strassen algorithm is faster than the standard matrix multiplication algorithm for large matrices.
 # https://en.wikipedia.org/wiki/Strassen_algorithm
-
 import numpy as np
 
 def pythonic_mtx_multi(arr1, arr2):

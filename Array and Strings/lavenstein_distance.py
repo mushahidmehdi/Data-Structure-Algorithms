@@ -26,7 +26,7 @@ def levenshtein_distance(str1, str2):
 		else:
 			i += 1; j += 1
 		
-	# chehking for any empty string
+	# checking for any empty string
 	if i < len_str1: dif += 1
 	if j < len_str2: dif += 1
 	

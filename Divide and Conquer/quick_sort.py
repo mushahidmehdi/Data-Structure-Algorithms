@@ -1,4 +1,3 @@
-
 # quick Sort is divide and conquer alghorithm.
 # pick a random point (pivot) from the arry
 # compared the rest of elemnet in array with pivot point and if the element is smaller than pivot append into left list, equal to middle list and greater to right list.

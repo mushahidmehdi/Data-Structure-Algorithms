@@ -26,7 +26,7 @@ def reversing_palindrome(strg):
 	# lowering all the cases:
 	strg = strg.lower()
 
-	# first reverse the string which gives us the memory location then join the string by empty space
+	# first reverse the string which gives us the memory location then join the string.
 	if strg == ''.join(reversed(strg)):
 		return True
 	return False

@@ -10,10 +10,6 @@ class AVLNode:
 		self.left = None
 		self.height = 1
 
-	def __str__(self):
-		return str(self.val)
-
-
 class AVLTree:
 	def insert(self, root, key):
 		if not root:

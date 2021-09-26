@@ -44,7 +44,6 @@ def using_defaultdict(str1, str2):
 		return False
 
 
-
 class Test(unittest.TestCase):
 	def test_permutation_pythonic(self):
 		self.assertTrue(checking_permutation_pythonic('abc', 'bac'), True)

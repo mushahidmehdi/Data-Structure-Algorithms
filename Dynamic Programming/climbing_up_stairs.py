@@ -16,16 +16,14 @@ def running_up(stairNum):
 # this problem can be solved using dynamic programming:
 def top_stair(stairNum):
 	# initially to all the stairs would be 0 as there is no hopping up
-	steps = [0]*(stairNum+1)
+	lookUp = [0]*(stairNum+1)
 	# To reach the 1st stairs it would take 1 step only, similary to reach 2nd step it would take 2 1 steps or 1 2 steps which mean there would be 2 ways.
-	steps[0] = 1
-	steps[1] = 1
-	steps[2] = 2
+	lookUp[0] = 1
+	lookUp[1] = 1
+	lookUp[2] = 2
 	for i in range(3, stairNum+1):
-		steps[i] = steps[i-1] + steps[i-2] + steps[i-3]
-	return steps[stairNum]
-
-
+		lookUp[i] = lookUp[i-1] + lookUp[i-2] + lookUp[i-3]
+	return lookUp[stairNum]
 
 
 

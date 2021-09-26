@@ -1,9 +1,11 @@
 # String Compressor
-# example, the string ‘aabcccccaaa’ would become a2b1c5a3.
+# example, the string ‘aabcccccaaa’ -------->>>> a2b1c5a3.
 import unittest
 
 def compress_string_by_count_itter(string):
-	counter = 0; prev_ele = ''; compressed_string = ''
+	counter = 0
+	prev_ele = ''
+	compressed_string = ''
 	for i in string:
 		if prev_ele == i:
 			counter += 1
@@ -12,8 +14,7 @@ def compress_string_by_count_itter(string):
 				compressed_string += prev_ele + str(counter)
 			prev_ele = i
 			counter = 1
-	last_itter = prev_ele + str(counter)
-	compressed_string = compressed_string + last_itter
+	compressed_string += (prev_ele + str(counter))
 
 	if len(compressed_string) < len(string):
 		return compressed_string

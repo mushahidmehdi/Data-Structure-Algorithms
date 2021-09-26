@@ -14,9 +14,9 @@ def main():
 	target = []
 	helper = []
 	hanoi(len(source), source, helper, target)
-	print(source)
-	print(helper)
-	print(target)
+	print(f'source: {source}')
+	print(f'helper: {helper}')
+	print(f'target: {target}')
 
 if __name__ == '__main__':
 	main()

@@ -17,6 +17,7 @@ def deci_to_binary(number):
 	if isNegative:
 		result = '-' + result
 
+
 	return result 
 if __name__ == '__main__':
 	binary = deci_to_binary(100)

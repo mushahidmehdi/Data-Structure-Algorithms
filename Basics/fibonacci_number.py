@@ -6,33 +6,33 @@
 # Fabonacci is a quintessential for recursive problem.
 
 def fabonacci_sequence(n):
-	"""simplest sol: fobonacci takes O(2**n) run time"""
-	if n == 0 or n == 1:
+	"""fobonacci takes O(2**n) run time"""
+	# base case to put an end to recurssion.
+	if n < 4:
 		return n
 	else:
 		return fabonacci_sequence(n-1) + fabonacci_sequence(n-2)
 
+# Dynamic Programming 
 def fabonnacci(num):
 	"""Optimize version using caching:O(n)"""
-
 	# guarded statement.
 	if isinstance(num, int) and num >= 0:
-		cache = []		# cache will store fib of each #
-		cache.append(0)
-		cache.append(1)
-		size = len(cache)
+		lookUp = []		# lookUp will store fib of each #
+		lookUp.append(0)
+		lookUp.append(1)
+		size = len(lookUp)
 		for _ in range(size, num+1):
-			fibNum = sum(cache[-2:])
-			cache.append(fibNum)
-
-		return cache[num]
+			fibNum = sum(lookUp[-2:])
+			lookUp.append(fibNum)
+		return lookUp[num]
 	else:
 		raise ValueError('Please enter: +ve #')
 
 
 def main():
-	print(fabonacci_sequence(5))
-	print(fabonnacci(100))
+	print(fabonacci_sequence(10))
+	#print(fabonnacci(100))
 
 if __name__ == '__main__':
 	main()

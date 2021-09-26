@@ -24,7 +24,6 @@ def urlify(str):
 
 
 
-
 class Test(unittest.TestCase):
 	def test_urlify(self):
 		self.assertEqual(urlify('much ado about nothing      '), "much%20ado%20about%20nothing")

@@ -14,7 +14,6 @@ def is_unique_using_dict(string):
 	return True
 
 
-
 class Test(unittest.TestCase):
 	def test_is_unique_using_set(self):
 		self.assertTrue(is_unique_using_set('abcd'), True)

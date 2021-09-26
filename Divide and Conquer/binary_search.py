@@ -15,7 +15,8 @@ def find_x(arr, ele):
 
 def main():
 	arr = [ 2, 3, 4, 10, 40 ]
-	x = 400
+	arr = [ 2, 6, 8, 10]
+	x = 6
 	print(find_x(arr, x))
 
 

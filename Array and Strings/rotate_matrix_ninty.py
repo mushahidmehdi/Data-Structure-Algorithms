@@ -1,8 +1,6 @@
 # given a matrix rotate it 90 degree to the left and right.
 
-
-#import numpy as np
-import unittest; import numpy as np
+import unittest
 
 def rotate_ninty_left(mtrx):
 	len_mtrx = len(mtrx)

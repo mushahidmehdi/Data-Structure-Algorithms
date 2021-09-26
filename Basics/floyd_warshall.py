@@ -11,6 +11,7 @@ import math
 
 def floyd(matrix):
 	distance = list(map(lambda p: list(map(lambda q : q, p)), matrix))
+	print(distance)
 
 	for k in range(Vertices):
 		for i in range(Vertices):
