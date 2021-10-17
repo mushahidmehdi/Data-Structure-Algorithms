@@ -1,4 +1,4 @@
-# using preOrder traversal, we first traverse through root-node  
+# using preOrder traversal, we first traverse the root-node and then left & finally right.  
 # Preorder Traversal (root, left, right)
 
 from collections import deque
@@ -48,7 +48,7 @@ if __name__ ==  '__main__':
 	node.left.left.left = Node(5)
 	node.left.left.right = Node(6)
 	node.right.left = Node(7)
-	node.right.rigth = Node(8)
+	node.right.right = Node(8)
 	node.right.left.left = Node(9)
 	node.right.left.rigth = Node(10)
 

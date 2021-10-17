@@ -4,7 +4,7 @@
 # The Asymtotic behaviour would be quadratic.
 
 def find_path(rows, cols):
-	# Check for the boundies: (base case)
+	# Check for the boundries: (base case)
 	if rows == cols == 1:
 		return 1
 	matrix = [[1]*cols]*rows

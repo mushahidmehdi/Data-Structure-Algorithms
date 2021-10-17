@@ -1,4 +1,4 @@
-# order successor: gives the next node in the traversal order as in accordce with the traversal types (preOrder-traversal, inOrder-traversal and postOrder-traversal)
+# Order successor: gives the next node in the traversal order as in accordance with the traversal types (preOrder-traversal, inOrder-traversal and postOrder-traversal)
 
 #  Write an algorithm to find the "next" node (i.e., in-order successor) of a given node in a binary search tree. You may assume that each node has a link to its parent.
 

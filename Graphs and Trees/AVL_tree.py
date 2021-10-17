@@ -70,16 +70,19 @@ class AVLTree:
 
 	# getter method to the heigth of tree.
 	def get_height(self, root):
-		if not root: return 0
+		if not root:
+			return 0
 		return root.height
 
 	# height on both sides of the root node.
 	def balance(self, root):
-		if not root: return 0
+		if not root:
+			return 0
 		return self.get_height(root.left) - self.get_height(root.right)
 
 	def pre_order(self, root):
-		if not root: return
+		if not root:
+			return
 		print(f'{root.val}', end=' ')
 		self.pre_order(root.left)
 		self.pre_order(root.right)

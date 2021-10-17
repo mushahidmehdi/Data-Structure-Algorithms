@@ -26,7 +26,6 @@ def top_stair(stairNum):
 	return lookUp[stairNum]
 
 
-
 def main():
 	stairNum = 10
 	#stairNum = 4

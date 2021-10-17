@@ -1,5 +1,5 @@
 
-# in in-order traveral first left node get traverse followed by visited then at last the right node get traverse.
+# in in-order traveral first left node get traverse followed by parent-node then at last the right node get traverse.
 # Inorder Traversal (left, root, right)
 
 from collections import deque
@@ -63,4 +63,4 @@ if __name__ == '__main__':
 	root.right.left.right = Node(8)
 	root.right.left.left = Node(7)
 	print(inorder_recurrsive(root))
-	print(inorder_itt(root))
+

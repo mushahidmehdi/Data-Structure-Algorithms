@@ -1,7 +1,6 @@
+
 # Building a binary search tree from sorted array:
-
-
-# method:
+# Method:
 # we will find the middle node of sorted array and make it root of the tree and then find the middle note of right half and left half and make them root of right and left side of branch respectively, using recussion;
 
 
@@ -13,7 +12,8 @@ class Node:
 
 	
 def balanced_bst_from_sorted_array(arr):
-	if not arr: return
+	if not arr:
+		return
 	mid = (len(arr))//2
 	root = Node(arr[mid])
 	root.left = balanced_bst_from_sorted_array(arr[:mid])

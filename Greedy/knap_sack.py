@@ -3,7 +3,7 @@
 # x = profit/weight.
 # Note: 0/1 knapsack problem is a special case knapsack problem that does not fill the knapsack with fractional items.
 
-# greedy approuch.
+# Greedy approuch.
 
 
 def ksnap_greedy(items, capacity):
