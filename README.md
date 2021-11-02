@@ -4,7 +4,7 @@
 
 This repository contains Data Structure and algorithms and their solutions using python language along refrence to most useful blogs articles and videos.
 
-## Data Structure.
+## Data Structure.  
 
 Basic algorithms and Data Structure to computer science problems:
 - Fibonacci number series
