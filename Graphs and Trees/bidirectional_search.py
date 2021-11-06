@@ -26,7 +26,7 @@ class Node:
 
 def bidirectional_search(beg_node, end_node):
 	def shortest_path(node):
-		"""Tracebacking the path after both BFS collide"""
+		"""finding the path after both BFS collide"""
 		path = []
 		node_copy = node
 		while node_copy:
@@ -58,7 +58,7 @@ def bidirectional_search(beg_node, end_node):
 				each_node.right = node
 				each_node.visited_right = True
 				queue.append(each_node)
-			# if the search is moving to left, meke left node visited == True
+			# if the search is moving to left, make left node visited == True
 			if node.visited_left == True and not each_node.visited_left:
 				each_node.left = node
 				each_node.visited_left = True
