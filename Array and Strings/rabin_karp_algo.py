@@ -18,13 +18,15 @@ def rabin_karp(pattern, subPattern):
 	hash = 0
 	for i in range(lenSubPattern):
 		# applying modular arthimatic formula: hash = c * b**m-i-1
-		subHash += ((ord(subPattern[i]) + ord('A')+1) * b**(lenSubPattern-i-1))
-		hash += ((ord(pattern[i]) + ord('A')+1) * b**(lenSubPattern-i-1))
+		subHash += ((ord(subPattern[i])) * b**(lenSubPattern-i-1))
+		hash += ((ord(pattern[i])) * b**(lenSubPattern-i-1))
+	print(subHash)
+	print(hash)
 
 	for i in range(lenPattern-lenSubPattern+1):
 		if i != 0:
 			# Rolling hash formula: b*(hash - c * b**m-1 ) + c
-			hash = b * (hash - (ord(pattern[i-1]) + ord('A')+1)*(b**(lenSubPattern-1)))+ (ord(pattern[lenSubPattern+i-1]) + ord('A')+1)
+			hash = b * (hash - (ord(pattern[i-1]))*(b**(lenSubPattern-1)))+ (ord(pattern[lenSubPattern+i-1]))
 		
 		if hash == subHash:
 			return (f'Sub Pattern Index at: {i}')
