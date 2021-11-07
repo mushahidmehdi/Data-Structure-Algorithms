@@ -4,6 +4,8 @@
 # if the child move 1 step, remaing would be n-1
 # similary, if child hop 2, or 3 steps; remaining steps would be n-2 or n-3 respectively.
 # keep running recursively, until we reach the base case where either there are no more stairs, 1 or 2 stairs.
+
+
 def running_up(stairNum):
 	if stairNum == 0 or stairNum == 1:
 		return 1

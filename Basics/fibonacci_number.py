@@ -8,7 +8,7 @@
 def fabonacci_sequence(n):
 	"""fobonacci takes O(2**n) run time"""
 	# base case to put an end to recurssion.
-	if n < 4:
+	if n in {0, 1}:
 		return n
 	else:
 		return fabonacci_sequence(n-1) + fabonacci_sequence(n-2)

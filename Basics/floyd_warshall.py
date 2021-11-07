@@ -1,4 +1,5 @@
 # the Floyd–Warshall algorithm is a Dynamic Programming appouch to find shortest paths in a directed weighted graph with positive or negative edge weights (but with no negative cycles). 
+
 # Both Floyd's and Dijkstra's algorithm may be used for finding the shortest path between vertices. The biggest difference is that Floyd's algorithm finds the shortest path between all vertices and Dijkstra's algorithm finds the shortest path between a single vertex and all other vertices.
 
 # Floyed Warshall algorithem fing the shortest path by creating other possible matrix and out of all those choosing the matrix with smallest distance
@@ -10,8 +11,6 @@ import math
 
 def floyd(matrix):
 	distance = list(map(lambda p: list(map(lambda q : q, p)), matrix))
-	print(distance)
-
 	for k in range(Vertices):
 		for i in range(Vertices):
 			for j in range(Vertices):

@@ -8,7 +8,7 @@ def find_x(arr, ele):
 	mid = lenArr//2
 	if ele == arr[mid]:
 		return True
-	if ele < arr[mid]:
+	elif ele < arr[mid]:
 		return find_x(arr[:mid], ele)
 	else:
 		return find_x(arr[mid:], ele)

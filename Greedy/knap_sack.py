@@ -3,9 +3,8 @@
 # x = profit/weight.
 # Note: 0/1 knapsack problem is a special case knapsack problem that does not fill the knapsack with fractional items.
 
+
 # Greedy approuch.
-
-
 def ksnap_greedy(items, capacity):
 	# sort all the items based on highest value/weight ratio.
 	items = sorted(items, key= lambda item: item[1]/item[2], reverse=True)
