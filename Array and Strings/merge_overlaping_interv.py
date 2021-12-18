@@ -2,34 +2,45 @@
 # https://www.educative.io/m/merge-overlapping-intervals
 
 # sort all the intervals with beggining value.
-
 from collections import deque
-class Pair:
+
+class Class:
 	def __init__(self, begin, end):
 		self.begin = begin
 		self.end = end
 
-def merge_overlap_interval(pair):
-	stack = deque()
-	# sorting by begenning time.
-	pair = sorted(pair, key=lambda x : x.begin, reverse=False)
-	for curr in pair:
-		if not stack or curr.begin > stack[-1].end:
-			stack.append(curr)
 
-		if stack[-1].end < curr.end:
-			stack[-1].end = curr.end
-		
+def merging_intervals(arr):
+	# sort all the pairs with beggining time intervals:
+	# sorted it doesn't change the original arr
+	sort_pairs = sorted(arr, key=lambda x: x.begin, reverse=False)
+	stack  = deque()
+	for pair in sort_pairs:
+		if not stack or stack[-1].end < pair.begin:
+			stack.append(pair)
+
+		if stack[-1].end < pair.end:
+			stack[-1].end = pair.end
+
 	while stack:
-		print(stack.pop())
-	
+		i = stack.pop()
+		print((i.begin, i.end))
+
+
 def main():
 	timePairs = [(1,4),(3,6),(9,15),(22,40),(40,44),(49,50),(50,60)]
-	pair = []
-	for i in timePairs:
-		start, end = i
-		pair.append(Pair(start, end))
-	merge_overlap_interval(pair)
+	pairs_objs = []
+	for pair in timePairs:
+		begin, end = pair
+		pairs = Class(begin, end)
+		pairs_objs.append(pairs)
+	merging_intervals(pairs_objs)
+
 
 if __name__ == '__main__':
 	main()
+
+
+
+
+

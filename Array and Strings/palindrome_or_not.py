@@ -1,12 +1,14 @@
 # Check whether the given string is palindrome or not.
 # palindrome means both from beggening to and end and to end to start of a string is same;
 import unittest
+import string
 
 def sliceing_palindrome(strg):
 	# removing space from string
 	strg = strg.replace(' ', '')
 	# removing puncutation
-	punctations = '!@#$%^&*()+_}|{":?<>,./'
+	
+	punctations = string.punctuation
 	for pun in punctations:
 		strg = strg.replace(pun, '')
 	# lowering all the cases:
@@ -20,14 +22,16 @@ def reversing_palindrome(strg):
 	# removing space from string
 	strg = strg.replace(' ', '')
 	# removing puncutation
-	punctations = '!@#$%^&*()+_}|{":?<>.,/'
+	punctations = string.punctuation
 	for pun in punctations:
 		strg = strg.replace(pun, '')
 	# lowering all the cases:
 	strg = strg.lower()
 
 	# first reverse the string which gives us the memory location then join the string.
-	if strg == ''.join(reversed(strg)):
+	reverse_palindrome = reversed(strg)
+	print(reverse_palindrome)
+	if strg == ''.join(reverse_palindrome):
 		return True
 	return False
 
