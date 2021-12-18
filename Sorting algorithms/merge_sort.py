@@ -2,6 +2,7 @@
 # by recussively dividing into the arr into half on each recurssion, till divide no more. then comparing each element such a manner that the smaller append into a left list and greater into a riht list we build up the sorted arr.
 
 # merge sort has time complexity of nlogn;
+
 import unittest
 def merge_sort(arr):
 	if len(arr) < 2:

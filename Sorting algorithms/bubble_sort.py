@@ -6,7 +6,6 @@
 # if latter is smaller than prior than swap the position.
 # keep runnig the loop until all the elements has been exhausted.
 import unittest
-from unittest.result import failfast
 
 def bubble_sort(arr):
 	flag = True

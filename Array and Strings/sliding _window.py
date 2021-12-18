@@ -15,16 +15,16 @@ def brute_force(arr, win=4):
 
 
 def sliding_window(nums: list, k: int) -> float:
-	max_sum = []
+	max_sum = 0
 	_sum, start = 0, 0
 	for end in range(len(nums)):
 		_sum += nums[end]
 		if end >= k - 1: # making equal to the sliding window size
-			max_sum.append(_sum)  
+			max_sum = max(_sum, max_sum)  
 			_sum -= nums[start]  
 			start += 1  # slide the window
 
-	return max(max_sum)
+	return max_sum
 
 
 

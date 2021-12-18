@@ -30,7 +30,6 @@ def reversing_palindrome(strg):
 
 	# first reverse the string which gives us the memory location then join the string.
 	reverse_palindrome = reversed(strg)
-	print(reverse_palindrome)
 	if strg == ''.join(reverse_palindrome):
 		return True
 	return False
