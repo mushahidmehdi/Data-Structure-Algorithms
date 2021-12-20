@@ -14,9 +14,9 @@ def min_num_coins(target, coins):
 	amounts = [float('inf') for i in range(target + 1)]
 	amounts[0] = 0
 	for coin in coins:
-		for amount in range(len(amounts)):
-			if coin <= amount:
-				amounts[amount] = min(amounts[amount], 1 +amounts[amount-coin])
+		for index in range(len(amounts)):
+			if coin <= index:
+				amounts[index] = min(amounts[index], 1 +amounts[index-coin])
 
 	return amounts[target] if amounts[target] != float('inf') else -1
 
