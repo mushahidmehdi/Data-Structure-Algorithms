@@ -1,6 +1,6 @@
 # Data-Structure-Algorithms           
 
-![GitHub Pipenv locked Python version (branch)](https://img.shields.io/github/pipenv/locked/python-version/mushahidmehdi/Full-Stack-Web-Application/main)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)  ![Arch](https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff&style=for-the-badge) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 This repository contains Data Structure and algorithms and their solutions using python language along refrence to most useful blogs articles and videos.
 
