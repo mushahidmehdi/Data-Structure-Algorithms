@@ -16,7 +16,7 @@ def lavinstian_dist(str1, str2):
 
 	while i < len(str1) and j < len(str2):
 		if str1[i] != str2[j]:
-			if len(str1) > len(str2):
+			if  len(str2) <  len(str1):
 				j += 1
 				diff += 1
 			elif len(str1) < len(str2):

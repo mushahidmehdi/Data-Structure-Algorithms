@@ -50,6 +50,7 @@ def pattern_matching(main_pattern, sub_pattern):
 	sub_hash = 0
 
 	for i in range(len(sub_pattern)):
+		# applying modular arthimatic formula: hash = c * b**m-i-1
 		sub_hash += (ord(sub_pattern[i])) * (base**(len(sub_pattern) - i - 1))
 		main_hash += (ord(main_pattern[i]))* (base**(len(sub_pattern) - i - 1))
 
