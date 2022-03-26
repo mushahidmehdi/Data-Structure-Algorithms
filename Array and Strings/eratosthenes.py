@@ -11,7 +11,6 @@ def eratosthenes(n: int):
 	
 	for i in range(2, num):
 		if primes[i] == True:
-
 			for j in range(i * 2, n, i):
 				primes[j] = False
 		
