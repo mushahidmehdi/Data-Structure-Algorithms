@@ -23,11 +23,50 @@ def max_continous_sum(arr):
 	return max_sum
 
 
-def main():
-	arr = [1,4,5,6,-2,-6,-9,0,1,2]
-	arr = [-1, 6, 7, -2, 0, 3,-4 ,-4]
-	print('the maximum sub array is: ', end='')
-	print(max_continous_sum(arr))
+# if the arry is circular, we will track both maximin positive and maximin negative as well as the array sum and return the maximm of either maximin positive or difference of array sum and maximun negative
 
+
+def max_continous_circular_arr(arr):
+	curr_max = curr_min = total_max = 0
+	pos_max = float('-inf')
+	min_max = float('inf')
+
+	for i in range(len(arr)):
+		total_max += arr[i]
+
+		curr_max += arr[i]
+
+		if curr_max > pos_max:
+			pos_max = curr_max
+
+		if curr_max < 0:
+			curr_max = 0
+		
+		curr_min += arr[i] 
+		if curr_min < min_max:
+			min_max = curr_min
+		
+		if curr_min > 0:
+			curr_min = 0
+	
+	print('Total max',total_max)
+	print('Minimun max',min_max)
+	print('positive max', pos_max)
+		
+	if total_max == min_max:
+		return pos_max
+
+	return max(pos_max, (total_max - min_max))
+
+	
+
+
+def main():
+	arr = [1, 4, 5, 6, -2, -6, -9, 0, 1, 2]
+	arr2 = [-1, -3, -2, 6, -1 ,4]
+	# print('the maximum sub array is: ', end='')
+	# print(max_continous_sum(arr))
+	# print("max Continous Sum: ", end='')
+	print(max_continous_circular_arr(arr2))
 if __name__ == '__main__':
 	main()
