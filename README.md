@@ -13,18 +13,47 @@ Basic algorithms and Data Structure to computer science problems:
 - Shortest path by Dijkstra
 
 Array & String:
-- Checking for Permutation
-- Lavenstein Distance -- strings differences.
-- Sum of Max Sub Array
-- Merge Overlapping Intervals
+- Added by One
+- Array Manipulation
+- Capitalize
+- Check Permutation
+- Eratosthenes
+- Find Duplicate linearly
+- Last Good index
+- Lavenstein Distance
+- Max Hour Glass
+- Max Non Adjacent Sum
+- Max water Container
+- Maximum Value of j - i
+- Median Of Two Sorted Array
+- Merge Overlaping Intervals
+- Merge Two Sorted Arries
+- Min number of Swaps
+- Missing number unordered in Arithematic Prograssion
+- Number Of Islands
+- Paint Two Houses
 - Palindrome or Not
-- Rabin Karp Algorithm
-- Rotate Matrix 90 °
-- Compress String by number of itteration
-- If all character in String is Unique.
-- Maximun water container.
-- Zero Column & Row
-- Urlify
+- Product Except Self
+- Rabin Karp Algorithem
+- Remove Duplicates
+- Remove Element
+- Rotate Array
+- Rotate Matrix Ninty
+- Set Index Remove Duplicate
+- Single Number
+- Sliding window
+- Smallest missing Positive number
+- String Compression
+- String Rotation
+- Sum max Continue Sub Arries
+- Third Largest Number
+- Triangle
+- Unique Character In String
+- Urlify 
+- 3_sum
+- Zero Matrix
+- Shift all Zeros to begining
+
 
 
 LinkedList:
