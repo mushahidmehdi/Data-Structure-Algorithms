@@ -1,6 +1,6 @@
 
 
-# given a query with starting and ending Index with a value to add between between them, find the greatest value that can be crate using this query.
+# given a query with starting and ending Index with a value to add between between them, find the greatest value that can be create using these quries.
 
 # https://www.youtube.com/watch?v=EnxYdFQpAMU
 
@@ -25,7 +25,8 @@ def array_manipulation(array:list, n:int):
 		arr[end+1] = arr[end+1] -value
 		
 	for i in range(1, len(arr)):
-		arr[i] = arr[i] + arr[i-1]
+		arr[i] = arr[i-1] + arr[i] 
+		
 	return max(arr)
 
 def main():
