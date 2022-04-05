@@ -6,7 +6,6 @@ def missing_one(arr):
 
 	for i in range(len(arr)):
 		xor = xor ^ arr[i]
-
 	for i in range(len(arr)+1):
 		xor = xor ^ (min(arr) + (i * commen_diff))
 	

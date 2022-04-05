@@ -1,4 +1,5 @@
-# Given an integer array nums, find the maximum value of j-i such that nums[j] # greater than nums[i].
+
+# Given an integer array, find the max value of j-i such that nums[j] > nums[i].
 
 # https://www.techiedelight.com/find-maximum-value-index-array/
 

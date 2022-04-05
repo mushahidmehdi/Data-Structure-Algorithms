@@ -1,4 +1,4 @@
-# given a list removed the duplicates.
+# given a list count the duplicates.
 
 
 def remove_duplicates(arr):

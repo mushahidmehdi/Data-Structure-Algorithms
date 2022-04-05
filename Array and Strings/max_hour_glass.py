@@ -20,7 +20,7 @@ def get_max_in_arr(matrix, row, col):
 
 arr = []
 for i in range(6):
-	arr_temp = [int(inp) for inp in input().strip().split(' ')]
+	arr_temp = [int(inp) for inp in input()]
 	arr.append(arr_temp)
 
 maxi = float('-inf')
